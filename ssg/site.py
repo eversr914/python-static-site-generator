@@ -1,7 +1,7 @@
 from pathlib import Path
 
 class Site ():
-    def Site(self, source, dest):
+    def __init__(self, source, dest):
         self.source = Path(source)
         selt.dest = Path(dest)
 
@@ -13,4 +13,4 @@ class Site ():
         self.dest.mkdir(parents=True, exist_ok=True)
         for path in self.source.rglob("*"):
             if path.is_dir():
-                path.create_dir(path)
+                self.create_dir(path)
